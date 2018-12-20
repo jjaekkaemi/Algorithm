@@ -6,28 +6,28 @@ int number = 10 ;
 int data[10] = {1, 10, 5, 8, 7, 6, 4, 3, 2, 9} ;
 
 void quickSort(int *data, int start, int end) {
-	if(start >= end) { // ¿ø¼Ò°¡ 1°³ÀÎ °æ¿ì 
+	if(start >= end) { // ì›ì†Œê°€ 1ê°œì¸ ê²½ìš° 
 		return ;  
 	}
 	
-	int key = start ; //Å°´Â Ã¹¹øÂ° ¿ø¼Ò 
+	int key = start ; //í‚¤ëŠ” ì²«ë²ˆì§¸ ì›ì†Œ 
 	int i = start + 1 ;
 	int j = end ;
 	int temp ;
 	
-	while(i <= j) { // ¾ù°¥¸±¶§ ±îÁö ¹İº¹ 
-		while(data[i]<= data[key] && i<=end) { //Å° °ªº¸´Ù Å« °ªÀ» Ã£À» ¶§ ±îÁö  
+	while(i <= j) { // ì—‡ê°ˆë¦´ë•Œ ê¹Œì§€ ë°˜ë³µ 
+		while(data[i]<= data[key] && i<=end) { //í‚¤ ê°’ë³´ë‹¤ í° ê°’ì„ ì°¾ì„ ë•Œ ê¹Œì§€  
 			i++ ;
 		} 
-		while(data[j]>= data[key] && j > start) { // Å° °ªº¸´Ù ÀÛÀº °ªÀ» Ã£À» ¶§ ±î 
+		while(data[j]>= data[key] && j > start) { // í‚¤ ê°’ë³´ë‹¤ ì‘ì€ ê°’ì„ ì°¾ì„ ë•Œ ê¹Œ 
 			j-- ;
 		}
-		if(i>j) {//¾ù°¥¸®°Ô µÈ´Ù¸é ÀÛÀº °ª°ú start°ªÀÇ ÀÚ¸®¸¦ ±³È¯. 
+		if(i>j) {//ì—‡ê°ˆë¦¬ê²Œ ëœë‹¤ë©´ ì‘ì€ ê°’ê³¼ startê°’ì˜ ìë¦¬ë¥¼ êµí™˜. 
 			temp = data[j] ;
 			data[j] = data[key] ;
 			data[key] = temp ;
 		}
-		else {//¾ù°¥¸®±â Àü±îÁö ±âÁØ°ª°ú ºñ±³ÇÑ ÀÛÀº ¼ıÀÚ Å« ¼ıÀÚ ÀÚ¸® ±³È¯. 
+		else {//ì—‡ê°ˆë¦¬ê¸° ì „ê¹Œì§€ ê¸°ì¤€ê°’ê³¼ ë¹„êµí•œ ì‘ì€ ìˆ«ì í° ìˆ«ì ìë¦¬ êµí™˜. 
 			temp = data[j] ;
 			data[j] = data[i] ;
 			data[i] = temp ;
