@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	int i, j, min, index, temp ;
 	 int array[10] = {10, 1, 9, 6, 7, 5, 3, 4, 2, 8} ;
 	 for(i = 0 ; i < 10 ; i++){
-	 	min = array[i] ;
+	 	min = 999 ;
 	 	for(j = i ; j<10; j++){
 	 		if(min>array[j]){
 	 			min = array[j] ;
