@@ -11,7 +11,7 @@ class Student {
 			this->name = name ;
 			this->score = score ;
 		}
-		// Á¤·Ä ±âÁÖÀº 'Á¡¼ö°¡ ÀÛÀº ¼ø¼­'
+		// ì •ë ¬ ê¸°ì£¼ì€ 'ì ìˆ˜ê°€ ìž‘ì€ ìˆœì„œ'
 		bool operator < (Student &student) {
 			return this->score < student.score ;
 		}
@@ -20,8 +20,8 @@ class Student {
 int main(void) {
 	int i ; 
 	Student students[] = {
-	Student("ÇÏÀç°æ", 100),
-	Student("Á¶ÇöÀÏ", 90)} ;
+	Student("í•˜ìž¬ê²½", 100),
+	Student("ì¡°í˜„ì¼", 90)} ;
 	sort(students, students + 2) ;
 	for(i = 0 ; i<2 ; i++) {
 		cout<<students[i].name<<" " ;
