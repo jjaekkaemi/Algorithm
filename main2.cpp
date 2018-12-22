@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std ;
+
+class Student {
+	public :
+		string name ;
+		int score ;
+		Student(string name, int score) {
+			this->name = name ;
+			this->score = score ;
+		}
+		// 정렬 기주은 '점수가 작은 순서'
+		bool operator < (Student &student) {
+			return this->score < student.score ;
+		}
+}; 
+
+int main(void) {
+	int i ; 
+	Student students[] = {
+	Student("하재경", 100),
+	Student("조현일", 90)} ;
+	sort(students, students + 2) ;
+	for(i = 0 ; i<2 ; i++) {
+		cout<<students[i].name<<" " ;
+	}
+}
+
